@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrot system for znet tutors</title>
+    <link rel="stylesheet" href="/css/foundation.css" />
+    
+    <script src="/js/angular.js" type="text/javascript"></script>
+    <script src="/js/Jacked.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/wisp/main.js"></script>
+    <script src="/js/jquery.js"></script>
+      
+
+</head>
+<body>
+	<div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+       <ul class="button-group">
+        <li><a href="/royalty" class="button">Tutor Videos</a></li>
+         <li><a href="/topchart" class="button">Top Content</a></li>
+         <li><a href="/categories" class="button">Top Categories</a></li>
+         <li><a href="/duration" class="button">Duration</a></li>
+        </ul>
+      </div>
+      <h4>Some carrots anyone?<small><br>{{message}}</small>
+      </h4>
+      <p class="right"><a href="/logout">Logout</a></p>
+      <hr />
+    </div>
+  </div>
+ 
+  <!-- End Nav -->
+  <div class="row">
+      {% block content %}
+      {% endblock %}
+    </div>
+  <!-- Footer -->
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link uno</a></li>
+            <li><a href="#">Link duo</a></li>
+            <li><a href="#">Link tres</a></li>
+            <li><a href="#">Link forto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+	
+    <script>
+      $(document).foundation();
+    </script>
+	
+</body>
+</html>

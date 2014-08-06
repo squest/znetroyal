@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrot system for zeniusnet</title>
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <script src="/js/angular.js" type="text/javascript"></script>
+    <script src="/js/modernizr.js"></script>
+  </head>
+  <body>
+  <div class="row">
+  	<div class="panel">
+  		<h2>Some Place to work </h2> <h6>{{message}}</h6>
+  	</div>
+  		<br>
+  		<br>
+  		<br>
+  		
+  		
+  	<div class="row">
+	<div class="large-4 columns">
+		<div class="callout panel">
+		<ul>
+			<h3>Some login rules</h3>
+			<br>
+			<li>You dont talk about it!</li>
+			<li>If someone says it existed</li>
+			<li>You dont talk about it</li>
+			<li>Seriously you dont!!</li>
+			<br>
+			<p>@ Copyright someone</p>
+		</ul>
+		</div>
+	</div>
+  	<div class="large-4 columns">
+	  	<h4>Sign in</h4>
+	  	<h6>To Znet extra backoffice</h6>
+	  	<br />
+	  	<form action="/act-login" method="post" data-abide>
+		  <div class="email-field">
+		    <label>Username <small>required (tapi boong)</small></label>
+		    <input type="text" name="username" value ="{{username}}">
+		    
+		  </div>
+		  <div class="password-field">
+		    <label>Password <small>required</small></label>
+		    <input type="password" id="password" name="pwd" value="{{pwd}}">
+		    <small class="error">Your password must match the requirements</small>
+		  </div>
+		  <input type="submit" value="Login" class="button">
+		</form>  	
+  	</div>
+  	<div class="small-2 columns">
+  			
+  		</div>
+  		</div>
+  <hr><p><center>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, molestias voluptate ipsam tempore </center>
+</p>
+  </div>
+
+  </body>
+</html>

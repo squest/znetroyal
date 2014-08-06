@@ -1,0 +1,63 @@
+{% extends "znetroyal/views/templates/base.html" %}
+{% block content %}
+  <div class="row">
+  	<div class="large-4 column">
+  		<ul>
+  			{% for link in webdata.links %}
+  				<li>
+  					<a href="{{link.url}}">
+  						{{link.title}}
+  					</a>
+  				</li>
+  			{% endfor %}
+  		</ul>
+  	</div>
+  	<div class="large-8 column">
+      
+      
+  		<h4>  
+  			{{webdata.title}}
+  		</h4>
+  		<br>
+      <ul class="inline-list">
+        {% for option in webdata.options %}
+          <li><a href="{{option.url}}">
+            {{option.text}}
+          </a></li>
+        {% endfor %}
+      </ul>
+      
+  		<table>
+  			<thead>
+  				<th>Rank</th>
+  				<th>Tutor</th>
+  				<th>Content Title</th>
+          <th>Video played</th>
+  			</thead>
+  			<tbody>
+  				{% for data in webdata.topchart %}
+  					<tr>
+  						<td>
+  							<center>
+  								{{data.rank}}
+  							</center>
+  						</td>
+  						<td>
+                <center>
+                  {{data.tutor}}
+                </center>
+              </td>
+  						<td>{{data.name}}</td>
+              <td>
+                <center>
+                  {{data.played}}
+                </center>
+              </td>
+  					</tr>
+  				{% endfor %}
+  			</tbody>
+  		</table>
+  	</div>
+  </div>
+    
+{% endblock %}

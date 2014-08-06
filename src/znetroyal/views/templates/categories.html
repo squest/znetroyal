@@ -1,0 +1,69 @@
+{% extends "znetroyal/views/templates/base.html" %}
+{% block content %}
+{% verbatim %}
+  <div class="row" ng-app="znetApp" ng-controller="CategoriesCtrl">
+    
+  	<div class="large-4 column">
+      <h6>Best performing Level-1 Categories</h6>
+  		<ul>
+  			
+  				<li ng-repeat="link in linksLevel1">
+  					<a ng-click="getReportLevel1($index)">
+  						{{link}}
+  					</a>
+  				</li>
+  			
+  		</ul>
+      <br>
+      <h6>
+        Best performing Level-2 Categories
+      </h6>
+      <ul>
+        <li ng-repeat="link in linksLevel2">
+          <a ng-click="getReportLevel2($index)">
+            {{link}}
+          </a>
+        </li>
+        
+
+      </ul>
+      
+  	</div>
+  	<div class="large-8 column" id="znContent">
+      
+      <br>
+  		<h4>  
+  			{{webdata.title}}
+  		</h4>
+  		<br><br>
+  		<table>
+  			<thead>
+  				<th>Rank</th>
+  				<th>Content Title</th>
+          <th>Video played</th>
+  			</thead>
+  			<tbody>
+  				
+  					<tr ng-repeat="datum in webdata.report">
+  						<td>
+  							<center>
+  								{{datum.rank}}
+  							</center>
+  						</td>
+  						<td><a ng-href="{{datum.link}}">
+                  {{datum.name}}      
+              </a></td>
+              <td>
+                <center>
+                  {{datum.played | number}}
+                </center>
+              </td>
+  					</tr>
+  				
+  			</tbody>
+  		</table>
+  	</div>
+    
+  </div>
+{% endverbatim %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "znetroyal/views/templates/base.html" %}
+{% block content %}
+  <div class="row" ng-app="ZnetRoyal" ng-controller="HomeCtrl" >
+    
+    {% verbatim %}
+    <div class="small-3 columns">
+      <ul>
+        <p>You want some other rules?</p>
+        <li>Tutor royalty diitung berdasarkan video played</li>
+        <li>Top-charts sesuai waktu</li>
+        <li>Some other stuff</li>
+        <li>Wow, it turns out those are a bit serious rules huh?!</li>
+      </ul>
+    </div>
+    <div class="small-9 columns">
+      <input type="text" ng-model="sometext">
+      {{sometext}}
+    </div>
+    
+    {% endverbatim %}
+  </div>
+    
+{% endblock %}
